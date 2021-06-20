@@ -12,8 +12,8 @@ My custom build of suckless simple terminal for my Linux install. I've decided t
 # Applied patches
 In this section I will list all the patches that I use for my simple terminal build:
 
-* [Alpha](./main/patches/st-alpha-0.8.2.diff) - patch used for transparency effect.
-* [Scrollback](./main/patches/st-scrollback-0.8.4.diff) - patch for scrollback through terminal with Shift + PgUp/PgDn keys.
-* [Scrollback-mouse](./main/patches/st-scrollback-mouse-20191024-a2c479c.diff) - patch for scrolling through the terminal with Shift + Mousewheel.
-* [Scrollback-mouse-altscreen](./main/patches/st-scrollback-mouse-altscreen-20200416-5703aa0.diff) - patch for scrolling trough the terminal with Mouse only.
-* [w3m](./main/patches/st-w3m-0.8.3.diff) - for displaying image previews within terminal-based file manager. Although I'm not sure if this was necessary as within `Ranger` file manager image previews did not display while using `w3m`, but when I've switched to `ueberzug` for previewing images, they started to show up in `ranger`.
+* [Alpha](../main/patches/st-alpha-0.8.2.diff) - patch used for transparency effect.
+* [Scrollback](../main/patches/st-scrollback-0.8.4.diff) - patch for scrollback through terminal with Shift + PgUp/PgDn keys.
+* [Scrollback-mouse](../main/patches/st-scrollback-mouse-20191024-a2c479c.diff) - patch for scrolling through the terminal with Shift + Mousewheel.
+* [Scrollback-mouse-altscreen](../main/patches/st-scrollback-mouse-altscreen-20200416-5703aa0.diff) - patch for scrolling trough the terminal with Mouse only.
+* [w3m](../main/patches/st-w3m-0.8.3.diff) - for displaying image previews within terminal-based file manager. Although I'm not sure if this was necessary as within `Ranger` file manager image previews did not display while using `w3m`, but when I've switched to `ueberzug` for previewing images, they started to show up in `ranger`.

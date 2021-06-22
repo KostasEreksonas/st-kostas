@@ -5,7 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
+<<<<<<< HEAD
 static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true";
+=======
+static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+>>>>>>> w3m
 static int borderpx = 2;
 
 /*
@@ -174,8 +178,11 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
+<<<<<<< HEAD
 	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},      0, /* !alt */ -1 },
 	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},      0, /* !alt */ -1 },
+=======
+>>>>>>> w3m
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },

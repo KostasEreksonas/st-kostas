@@ -95,6 +95,7 @@ unsigned int tabspaces = 8;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* bg opacity */
 float alpha = 0.8;
 
@@ -102,6 +103,8 @@ float alpha = 0.8;
 >>>>>>> scrollback
 =======
 >>>>>>> scrollback-mouse
+=======
+>>>>>>> scrollback-mouse-altscreen
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
@@ -131,11 +134,14 @@ static const char *colorname[] = {
 	"#555555",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"black",
 =======
 >>>>>>> scrollback
 =======
 >>>>>>> scrollback-mouse
+=======
+>>>>>>> scrollback-mouse-altscreen
 };
 
 
@@ -146,6 +152,7 @@ static const char *colorname[] = {
 unsigned int defaultfg = 7;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 unsigned int defaultbg = 258;
 =======
 unsigned int defaultbg = 0;
@@ -153,6 +160,9 @@ unsigned int defaultbg = 0;
 =======
 unsigned int defaultbg = 0;
 >>>>>>> scrollback-mouse
+=======
+unsigned int defaultbg = 0;
+>>>>>>> scrollback-mouse-altscreen
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
@@ -199,6 +209,7 @@ static uint forcemousemod = ShiftMask;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
 	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
@@ -207,6 +218,12 @@ static MouseShortcut mshortcuts[] = {
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
+=======
+	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},      0, /* !alt */ -1 },
+	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},      0, /* !alt */ -1 },
+	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
+>>>>>>> scrollback-mouse-altscreen
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
@@ -230,12 +247,15 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 >>>>>>> scrollback
 =======
 >>>>>>> scrollback-mouse
+=======
+>>>>>>> scrollback-mouse-altscreen
 };
 
 /*

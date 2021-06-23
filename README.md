@@ -53,6 +53,12 @@ In this section I will present the custom keybindings for `st` terminal.
 |:-----------------:|:-------------------------------------:|
 | Ctrl + Shift + U	| Piping urls from st window to dmenu	|
 
+# Opening urls
+
+For opening urls from `simple terminal`, `xurls` package is necessary. For Arch Linux it can be downloaded from [AUR](https://aur.archlinux.org/packages/xurls/).
+
+Also I have created a ***[piper](http://arza.us/paste/piper)*** script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
+
 # Notes
 
 1. ***xlib header files (libx11)*** are neccessary for compiling the software.

@@ -26,6 +26,25 @@ In this section I will list all the patches that I use for my simple terminal bu
 
 In this section I will add instructions how to install this my custom `st` build.
 
+1. Clone this git repository:
+
+`git clone https://github.com/KostasEreksonas/st-kostas.git`
+
+2. Go to the folder cloned repository:
+
+`cd st-kostas`
+
+3. Build the package:
+
+`make`
+
+4. Run a clean install of this package ***with root privilleges***:
+`make clean install`
+
+5. Done!
+
 # Notes
 
-Multiple line urls are ***not*** handled.
+1. ***xlib header files (libx11)*** are neccessary for compiling the software.
+2. If you want transparency and other visual effects, install a composition manager (in my case it is `picom`).
+3. Multiple line urls are ***not*** handled.

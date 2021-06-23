@@ -44,6 +44,14 @@ In this section I will add instructions how to install this my custom `st` build
 
 5. Done!
 
+# Keybinds
+
+In this section I will present the custom keybindings for `st` terminal.
+
+|		Keybind		|				Function				|
+|:-----------------:|:-------------------------------------:|
+| Ctrl + Shift + U	| Piping urls from st window to dmenu	|
+
 # Notes
 
 1. ***xlib header files (libx11)*** are neccessary for compiling the software.

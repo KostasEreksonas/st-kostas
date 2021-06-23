@@ -6,6 +6,7 @@ Table of Contents
 * [My custom st build](#My-custom-st-build)
 * [Applied patches](#Applied-patches)
 * [Installation](#Installation)
+* [Keybinds](#Keybinds)
 * [Notes](#Notes)
 
 # My custom st build

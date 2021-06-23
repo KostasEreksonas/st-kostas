@@ -24,3 +24,7 @@ In this section I will list all the patches that I use for my simple terminal bu
 # Installation
 
 In this section I will add instructions how to install this my custom `st` build.
+
+# Notes
+
+Multiple line urls are ***not*** handled.

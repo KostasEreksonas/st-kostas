@@ -39,6 +39,7 @@ In this section I will add instructions how to install this my custom `st` build
 `make`
 
 4. Run a clean install of this package ***with root privilleges***:
+
 `make clean install`
 
 5. Done!

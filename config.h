@@ -7,6 +7,9 @@
  */
 static char *font = "Liberation Mono:pixelsize=20:antialias=true:autohint=true";
 static int borderpx = 2;
+static char *openurlcmd[] = { "/bin/sh", "-c",
+	"xurls | dmenu -l 10 | xargs -r piper",
+	"externalpipe", NULL };
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -207,7 +210,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,				XK_x,			externalpipe,	{ .v = "xurls | dmenu -l 10  | xargs -r piper"} },
+	{ TERMMOD,				XK_U,			externalpipe,	{ .v = openurlcmd } },
 };
 
 /*

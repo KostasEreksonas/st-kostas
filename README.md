@@ -40,7 +40,11 @@ In this section I will provide instructions for installing my custom `st` build.
 
 `make`
 
+<<<<<<< HEAD
 4. Compile this custom `st` build ***with root privilleges***:
+=======
+4. Compile this custom `st` package ***with root privilleges***:
+>>>>>>> newpatch
 
 `sudo make clean install`
 
@@ -58,7 +62,11 @@ In this section I will present the custom keybindings for `st` terminal.
 
 For opening urls from `simple terminal`, `xurls` package is necessary. For Arch Linux it can be downloaded from [AUR](https://aur.archlinux.org/packages/xurls/).
 
+<<<<<<< HEAD
 Also I have copied a ***[piper](http://arza.us/paste/piper)*** script and put it in a script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
+=======
+Also I have copied a ***[piper](http://arza.us/paste/piper)*** script and put in a `piper` script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
+>>>>>>> newpatch
 
 # Notes
 

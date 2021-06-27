@@ -26,13 +26,13 @@ In this section I will list all the patches that I use for my simple terminal bu
 
 # Installation
 
-In this section I will add instructions how to install this my custom `st` build.
+In this section I will provide instructions for installing my custom `st` build.
 
 1. Clone this git repository:
 
 `git clone https://github.com/KostasEreksonas/st-kostas.git`
 
-2. Go to the folder cloned repository:
+2. Go to the folder of the cloned repository:
 
 `cd st-kostas`
 
@@ -40,9 +40,9 @@ In this section I will add instructions how to install this my custom `st` build
 
 `make`
 
-4. Run a clean install of this package ***with root privilleges***:
+4. Compile this custom `st` build ***with root privilleges***:
 
-`make clean install`
+`sudo make clean install`
 
 5. Done!
 

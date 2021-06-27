@@ -58,7 +58,7 @@ In this section I will present the custom keybindings for `st` terminal.
 
 For opening urls from `simple terminal`, `xurls` package is necessary. For Arch Linux it can be downloaded from [AUR](https://aur.archlinux.org/packages/xurls/).
 
-Also I have created a ***[piper](http://arza.us/paste/piper)*** script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
+Also I have copied a ***[piper](http://arza.us/paste/piper)*** script and put it in a script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
 
 # Notes
 

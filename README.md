@@ -32,7 +32,7 @@ In this section I will add instructions how to install this my custom `st` build
 
 `git clone https://github.com/KostasEreksonas/st-kostas.git`
 
-2. Go to the folder cloned repository:
+2. Go to the folder of the cloned repository:
 
 `cd st-kostas`
 
@@ -40,7 +40,7 @@ In this section I will add instructions how to install this my custom `st` build
 
 `make`
 
-4. Run a clean install of this package ***with root privilleges***:
+4. Compile this custom `st` package ***with root privilleges***:
 
 `make clean install`
 
@@ -58,7 +58,7 @@ In this section I will present the custom keybindings for `st` terminal.
 
 For opening urls from `simple terminal`, `xurls` package is necessary. For Arch Linux it can be downloaded from [AUR](https://aur.archlinux.org/packages/xurls/).
 
-Also I have created a ***[piper](http://arza.us/paste/piper)*** script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
+Also I have copied a ***[piper](http://arza.us/paste/piper)*** script and put in a `piper` script file within `/usr/local/bin` location and made it executable with `chmod +x` command by running it with ***root*** privilleges.
 
 # Notes
 

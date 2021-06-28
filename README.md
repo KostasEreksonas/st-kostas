@@ -19,14 +19,14 @@ My custom build of suckless simple terminal for my Linux install. I've decided t
 In this section I will list all the patches that I use for my simple terminal build:
 
 * [Alpha](../main/patches/st-alpha-0.8.2.diff) - patch used for transparency effect.
+* [Anysize](../main/patches/st-anysize-0.8.4.diff) - a patch for allowing st to resize to any pixel size.
 * [Scrollback](../main/patches/st-scrollback-0.8.4.diff) - patch for scrollback through terminal with Shift + PgUp/PgDn keys.
+* [External pipe](../main/patches/st-externalpipe-0.8.4.diff) - for reading and writing simple terminal's screen through a pipe. Main purpose of this is to pipe urls from `simple terminal` to `dmenu`.
+* [External pipe eternal](../main/patches/st-externalpipe-eternal-0.8.3.diff) - allows to use `externalpipe` with the entire terminal history.
+* [Ligatures](../main/patches/st-ligatures-alpha-scrollback-20200430-0.8.3.diff) - ligatures patch for proper ligatures drawing.
 * [Scrollback-mouse](../main/patches/st-scrollback-mouse-20191024-a2c479c.diff) - patch for scrolling through the terminal with Shift + Mousewheel.
 * [Scrollback-mouse-altscreen](../main/patches/st-scrollback-mouse-altscreen-20200416-5703aa0.diff) - patch for scrolling trough the terminal with Mouse only.
 * [w3m](../main/patches/st-w3m-0.8.3.diff) - for displaying image previews within terminal-based file manager. Although I'm not sure if this was necessary as within `Ranger` file manager image previews did not display while using `w3m`, but when I've switched to `ueberzug` for previewing images, they started to show up in `ranger`.
-* [External pipe](../main/patches/st-externalpipe-0.8.4.diff) - for reading and writing simple terminal's screen through a pipe. Main purpose of this is to pipe urls from `simple terminal` to `dmenu`.
-* [External pipe eternal](../main/patches/st-externalpipe-eternal-0.8.3.diff) - allows to use `externalpipe` with the entire terminal history.
-* [Anysize](../main/patches/st-anysize-0.8.4.diff) - a patch for allowing st to resize to any pixel size.
-* [Ligatures](../main/patches/st-ligatures-alpha-scrollback-20200430-0.8.3.diff) - ligatures patch for proper ligatures drawing.
 
 # Installation
 

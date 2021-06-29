@@ -54,9 +54,9 @@ In this section I will add instructions how to install this my custom `st` build
 
 In this section I will present the custom keybindings for `st` terminal.
 
-|		Keybind		|				Function				|
-|:-----------------:|:-------------------------------------:|
-| Ctrl + Shift + U	| Piping urls from st window to dmenu	|
+|		Keybind		|					Function				|
+|:-----------------:|:-----------------------------------------:|
+| Ctrl + Shift + U	| Piping urls from `st` window to `dmenu`	|
 
 # Opening urls
 

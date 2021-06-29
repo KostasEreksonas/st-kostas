@@ -8,7 +8,7 @@ Table of Contents
 * [My custom st build](#My-custom-st-build)
 * [Applied patches](#Applied-patches)
 * [Installation](#Installation)
-* [Keybinds](#Keybinds)
+* [Keybindings](#Keybindings)
 * [Notes](#Notes)
 * [Opening URL's](#Opening-urls)
 
@@ -50,7 +50,7 @@ In this section I will add instructions how to install this my custom `st` build
 
 5. Done!
 
-# Keybinds
+# Keybindings
 
 In this section I will present the custom keybindings for `st` terminal.
 

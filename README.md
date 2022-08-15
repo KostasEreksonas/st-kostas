@@ -52,6 +52,7 @@ In this section I will present the custom keybindings for `st` terminal.
 | Ctrl + Shift + U		| Open a menu with web links from terminal	|
 | Ctrl + Shift + PgUp	| Increase size of the terminal font		|
 | Ctrl + Shift + PgDown | Decrease size of the terminal font		|
+| Ctrl + F6				| Switch between light and dark color theme |
 
 # Notes
 

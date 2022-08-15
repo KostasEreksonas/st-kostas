@@ -40,6 +40,7 @@ Following is a list of patches that I have applied to my custom build of st:
 * [Scrollback](https://st.suckless.org/patches/scrollback/) - patch for scrollback through terminal with Shift + PgUp/PgDn keys.
 * [Scrollback-mouse](https://st.suckless.org/patches/scrollback/) - patch for scrolling through the terminal with Shift + Mousewheel.
 * [Scrollback-mouse-altscreen](https://st.suckless.org/patches/scrollback/) - patch for scrolling trough the terminal with Mouse only.
+* [Solarized](https://st.suckless.org/patches/solarized/) - solarized colorscheme created by Ethan Schoonover for st.
 * [w3m](https://st.suckless.org/patches/w3m/) - for displaying image previews within terminal-based file manager.
 
 # Keybindings

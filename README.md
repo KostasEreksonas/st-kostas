@@ -56,9 +56,11 @@ Installation steps are as follows:
 
 In this section I will present the custom keybindings for `st` terminal.
 
-|		Keybind		|					Function				|
-|:-----------------:|:-----------------------------------------:|
-| Ctrl + Shift + U	| Piping urls from `st` window to `dmenu`	|
+|		 Keybind		|					Function				|
+|:---------------------:|:-----------------------------------------:|
+| Ctrl + Shift + U		| Piping urls from `st` window to `dmenu`	|
+| Ctrl + Shift + PgUp	| Increase size of the terminal font		|
+| Ctrl + Shift + PgDown | Decrease size of the terminal font		|
 
 # Opening urls
 

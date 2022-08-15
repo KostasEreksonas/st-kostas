@@ -105,7 +105,7 @@ unsigned int tabspaces = 8;
 float alpha = 0.8, alphaUnfocused = 0.6;
 
 /* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
+static const char *altcolorname[] = {
        /* solarized dark */
        "#073642",  /*  0: black    */
        "#dc322f",  /*  1: red      */
@@ -126,7 +126,7 @@ static const char *colorname[] = {
  };
 
 /* Terminal colors for alternate (light) palette */
-static const char *altcolorname[] = {
+static const char *colorname[] = {
        /* solarized light */
        "#eee8d5",  /*  0: black    */
        "#dc322f",  /*  1: red      */

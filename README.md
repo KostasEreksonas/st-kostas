@@ -6,17 +6,19 @@ Table of Contents
 =================
 * [st-kostas](#st-kostas)
 * [My custom st build](#My-custom-st-build)
-* [Applied patches](#Applied-patches)
+* [Applied patches](#Applied-Patches)
 * [Installation](#Installation)
 * [Keybindings](#Keybindings)
 * [Notes](#Notes)
 * [Opening URL's](#Opening-urls)
 
 # My custom st build
+
 My custom build of suckless simple terminal for my Linux install. I've decided to give a try to a suckless software with my Linux installation and I will document the process here.
 
-# Applied patches
-In this section I will list all the patches that I use for my simple terminal build:
+# Applied Patches
+
+Following is a list of patches that I have applied to my custom build of st:
 
 * [Alpha](../main/patches/st-alpha-0.8.2.diff) - patch used for transparency effect.
 * [Anysize](../main/patches/st-anysize-0.8.4.diff) - a patch for allowing st to resize to any pixel size.
@@ -26,11 +28,11 @@ In this section I will list all the patches that I use for my simple terminal bu
 * [Ligatures](../main/patches/st-ligatures-alpha-scrollback-20200430-0.8.3.diff) - ligatures patch for proper ligatures drawing.
 * [Scrollback-mouse](../main/patches/st-scrollback-mouse-20191024-a2c479c.diff) - patch for scrolling through the terminal with Shift + Mousewheel.
 * [Scrollback-mouse-altscreen](../main/patches/st-scrollback-mouse-altscreen-20200416-5703aa0.diff) - patch for scrolling trough the terminal with Mouse only.
-* [w3m](../main/patches/st-w3m-0.8.3.diff) - for displaying image previews within terminal-based file manager. Although I'm not sure if this was necessary as within `Ranger` file manager image previews did not display while using `w3m`, but when I've switched to `ueberzug` for previewing images, they started to show up in `ranger`.
+* [w3m](../main/patches/st-w3m-0.8.3.diff) - for displaying image previews within terminal-based file manager.
 
 # Installation
 
-In this section I will add instructions how to install this my custom `st` build.
+Installation steps are as follows:
 
 1. Clone this git repository:
 

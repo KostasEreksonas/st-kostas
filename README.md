@@ -1,7 +1,6 @@
 # st-kostas
 
 Custom build of a suckless simple terminal (st) utility.
-***Note:*** Newpatch branch is used for applying new patches to `st` before merging them to the main branch. It's primary used as a fail-safe in case of errors.
 
 Table of Contents
 =================
@@ -11,8 +10,6 @@ Table of Contents
 * [Notes](#Notes)
 
 # Installation
-
-Installation steps are as follows:
 
 1. Clone this git repository:
 
@@ -26,11 +23,9 @@ Installation steps are as follows:
 
 `make`
 
-4. Compile this custom `st` package ***with root privilleges***:
+4. Compile the package with ***root*** privilleges:
 
 `make clean install`
-
-5. Done!
 
 # Applied Patches
 

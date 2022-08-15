@@ -9,7 +9,6 @@ Table of Contents
 * [Applied patches](#Applied-Patches)
 * [Keybindings](#Keybindings)
 * [Notes](#Notes)
-* [Opening URL's](#Opening-Urls)
 
 # Installation
 
@@ -38,6 +37,7 @@ Installation steps are as follows:
 Following is a list of patches that I have applied to my custom build of st:
 
 * [Alpha](https://st.suckless.org/patches/alpha/) - patch used for transparency effect.
+* [Alpha Focus Highlight](https://st.suckless.org/patches/alpha_focus_highlight/) - different terminal opacity values when (un)focusing the terminal.
 * [Anysize](https://st.suckless.org/patches/anysize/) - a patch for allowing st to resize to any pixel size.
 * [External pipe](https://st.suckless.org/patches/externalpipe/) - for reading and writing simple terminal's screen through a pipe. Main purpose of this is to pipe urls from `simple terminal` to `dmenu`.
 * [External pipe eternal](https://st.suckless.org/patches/externalpipe/) - allows to use `externalpipe` with the entire terminal history.

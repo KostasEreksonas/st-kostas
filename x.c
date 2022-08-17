@@ -57,11 +57,12 @@ static void clipcopy(const Arg *);
 static void clippaste(const Arg *);
 static void numlock(const Arg *);
 static void selpaste(const Arg *);
-static void swapcolors(const Arg *);
 static void zoom(const Arg *);
 static void zoomabs(const Arg *);
 static void zoomreset(const Arg *);
 static void ttysend(const Arg *);
+static void nextscheme(const Arg *);
+static void selectscheme(const Arg *);
 
 /* config.h for applying patches and the configuration. */
 #include "config.h"
@@ -192,6 +193,7 @@ static void mousesel(XEvent *, int);
 static void mousereport(XEvent *);
 static char *kmap(KeySym, uint);
 static int match(uint, uint);
+static void updatescheme(void);
 
 static void run(void);
 static void usage(void);
@@ -264,8 +266,6 @@ static int focused = 0;
 
 static int oldbutton = 3; /* button event on startup: 3 = release */
 
-int usealtcolors = 0; /* 1 to use alternate palette */
-
 void
 clipcopy(const Arg *dummy)
 {
@@ -302,14 +302,6 @@ void
 numlock(const Arg *dummy)
 {
 	win.mode ^= MODE_NUMLOCK;
-}
-
-void
-swapcolors(const Arg *dummy)
-{
- usealtcolors = !usealtcolors;
- xloadcols();
- redraw();
 }
 
 void
@@ -775,11 +767,6 @@ sixd_to_16bit(int x)
 	return x == 0 ? 0 : 0x3737 + 0x2828 * x;
 }
 
-const char* getcolorname(int i)
-{
-    return (usealtcolors) ?  altcolorname[i] : colorname[i];
-}
-
 int
 xloadcolor(int i, const char *name, Color *ncolor)
 {
@@ -798,7 +785,7 @@ xloadcolor(int i, const char *name, Color *ncolor)
 			return XftColorAllocValue(xw.dpy, xw.vis,
 			                          xw.cmap, &color, ncolor);
 		} else
-			name = getcolorname(i);
+			name = colorname[i];
 	}
 
 	return XftColorAllocName(xw.dpy, xw.vis, xw.cmap, name, ncolor);
@@ -821,14 +808,14 @@ xloadcols(void)
 	Color *cp;
 
 	if (!loaded) {
-		dc.collen = 1 + (defaultbg = MAX(LEN(colorname), 256));
+		dc.collen = 258;
 		dc.col = xmalloc((dc.collen) * sizeof(Color));
 	}
 
 	for (int i = 0; i+1 < dc.collen; ++i)
 		if (!xloadcolor(i, NULL, &dc.col[i])) {
-			if (getcolorname(i))
-				die("could not allocate color '%s'\n", getcolorname(i));
+			if (colorname[i])
+				die("could not allocate color '%s'\n", colorname[i]);
 			else
 				die("could not allocate color %d\n", i);
 		}
@@ -1320,13 +1307,13 @@ xinit(int cols, int rows)
 	cursor = XCreateFontCursor(xw.dpy, mouseshape);
 	XDefineCursor(xw.dpy, xw.win, cursor);
 
-	if (XParseColor(xw.dpy, xw.cmap, getcolorname(mousefg), &xmousefg) == 0) {
+	if (XParseColor(xw.dpy, xw.cmap, colorname[mousefg], &xmousefg) == 0) {
 		xmousefg.red   = 0xffff;
 		xmousefg.green = 0xffff;
 		xmousefg.blue  = 0xffff;
 	}
 
-	if (XParseColor(xw.dpy, xw.cmap, getcolorname(mousebg), &xmousebg) == 0) {
+	if (XParseColor(xw.dpy, xw.cmap, colorname[mousebg], &xmousebg) == 0) {
 		xmousebg.red   = 0x0000;
 		xmousebg.green = 0x0000;
 		xmousebg.blue  = 0x0000;
@@ -2160,6 +2147,47 @@ usage(void)
 	    " [stty_args ...]\n", argv0, argv0);
 }
 
+void
+nextscheme(const Arg *arg)
+{
+	colorscheme += arg->i;
+	if (colorscheme >= (int)LEN(schemes))
+		colorscheme = 0;
+	else if (colorscheme < 0)
+		colorscheme = LEN(schemes) - 1;
+	updatescheme();
+}
+
+void
+selectscheme(const Arg *arg)
+{
+	if (BETWEEN(arg->i, 0, LEN(schemes)-1)) {
+		colorscheme = arg->i;
+		updatescheme();
+	}
+}
+
+void
+updatescheme(void)
+{
+	int oldbg, oldfg;
+
+	oldbg = defaultbg;
+	oldfg = defaultfg;
+	colorname = schemes[colorscheme].colors;
+	defaultbg = schemes[colorscheme].bg;
+	defaultfg = schemes[colorscheme].fg;
+	defaultcs = schemes[colorscheme].cs;
+	defaultrcs = schemes[colorscheme].rcs;
+	xloadcols();
+	if (defaultbg != oldbg)
+		tupdatebgcolor(oldbg, defaultbg);
+	if (defaultfg != oldfg)
+		tupdatefgcolor(oldfg, defaultfg);
+	cresize(win.w, win.h);
+	redraw();
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -2215,6 +2243,12 @@ main(int argc, char *argv[])
 	} ARGEND;
 
 run:
+	colorname = schemes[colorscheme].colors;
+	defaultbg = schemes[colorscheme].bg;
+	defaultfg = schemes[colorscheme].fg;
+	defaultcs = schemes[colorscheme].cs;
+	defaultrcs = schemes[colorscheme].rcs;
+
 	if (argc > 0) /* eat all remaining arguments */
 		opt_cmd = argv;
 

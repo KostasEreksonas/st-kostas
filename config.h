@@ -8,8 +8,8 @@
 static char *font = "Hack Nerd Font Mono:size=20:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
+	"Hack Nerd Font Mono:pixelsize=20:antialias=true:autohint=true"
 	/* "Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-	/* "Hack Nerd Font Mono:pixelsize=12:antialias=true:autohint=true", */
 };
 static int borderpx = 2;
 static char *openurlcmd[] = { "/bin/sh", "-c",
@@ -173,9 +173,9 @@ static const ColorScheme schemes[] = {
 	  "#076678", "#8f3f71", "#427b58", "#3c3836",
 	  [256]="#3c3836", "#555555"}, 15, 0, 256, 257},
 };
- 
+
 static const char * const * colorname;
-int colorscheme = 6;
+int colorscheme = 5;
 
 /*
  * Default colors (colorname index)

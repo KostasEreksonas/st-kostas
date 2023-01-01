@@ -194,7 +194,7 @@ unsigned int bg = 16, bgUnfocused = 16;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 4;
+static unsigned int cursorshape = 7;
 
 /*
  * Default columns and rows numbers

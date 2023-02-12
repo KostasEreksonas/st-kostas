@@ -29,7 +29,7 @@ Table of Contents
 
 # Applied Patches
 
-Following is a list of patches that I have applied to my custom build of st:
+Following is a list of patches that I have applied to my custom build of st.
 
 * [Alpha](https://st.suckless.org/patches/alpha/) - patch used for transparency effect.
 * [Alpha Focus Highlight](https://st.suckless.org/patches/alpha_focus_highlight/) - different terminal opacity values when (un)focusing the terminal.

@@ -66,6 +66,9 @@ void kscrolldown(const Arg *);
 /* config.h for applying patches and the configuration. */
 #include "config.h"
 
+/* size of title stack */
+#define TITLESTACKSIZE 8
+
 /* XEMBED messages */
 #define XEMBED_FOCUS_IN 4
 #define XEMBED_FOCUS_OUT 5
@@ -225,6 +228,8 @@ static DC dc;
 static XWindow xw;
 static XSelection xsel;
 static TermWindow win;
+static int tstki;                        /* title stack index */
+static char *titlestack[TITLESTACKSIZE]; /* title stack */
 
 /* Font Ring Cache */
 enum { FRC_NORMAL, FRC_ITALIC, FRC_BOLD, FRC_ITALICBOLD };
@@ -1504,16 +1509,33 @@ void xseticontitle(char *p) {
   XFree(prop.value);
 }
 
-void xsettitle(char *p) {
-  XTextProperty prop;
-  DEFAULT(p, opt_title);
+void xfreetitlestack(void) {
+  for (int i = 0; i < LEN(titlestack); i++) {
+    free(titlestack[i]);
+    titlestack[i] = NULL;
+  }
+}
 
-  if (Xutf8TextListToTextProperty(xw.dpy, &p, 1, XUTF8StringStyle, &prop) !=
-      Success)
-    return;
-  XSetWMName(xw.dpy, xw.win, &prop);
-  XSetTextProperty(xw.dpy, xw.win, &prop, xw.netwmname);
-  XFree(prop.value);
+void xsettitle(char *p, int pop) {
+  XTextProperty prop;
+  if (pop) {
+    titlestack[tstki] = NULL;
+    tstki = (tstki - 1 + TITLESTACKSIZE) % TITLESTACKSIZE;
+    p = titlestack[tstki] ? titlestack[tstki] : opt_title;
+  } else if (p) {
+    titlestack[tstki] = xstrdup(p);
+  } else {
+    titlestack[tstki] = NULL;
+    p = opt_title;
+  }
+}
+
+void xpushtitle(void) {
+  int tstkin = (tstki + 1) % TITLESTACKSIZE;
+
+  free(titlestack[tstkin]);
+  titlestack[tstkin] = titlestack[tstki] ? xstrdup(titlestack[tstki]) : NULL;
+  tstki = tstkin;
 }
 
 int xstartdraw(void) { return IS_SET(MODE_VISIBLE); }

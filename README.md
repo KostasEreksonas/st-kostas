@@ -34,6 +34,7 @@ Following is a list of patches that I have applied to my custom build of st.
 * [Alpha](https://st.suckless.org/patches/alpha/) - patch used for transparency effect.
 * [Alpha Focus Highlight](https://st.suckless.org/patches/alpha_focus_highlight/) - different terminal opacity values when (un)focusing the terminal.
 * [Anysize](https://st.suckless.org/patches/anysize/) - a patch for allowing st to resize to any pixel size.
+* [Blinking cursor](https://st.suckless.org/patches/blinking_cursor/)
 * [Colorschemes](https://st.suckless.org/patches/colorschemes/) - applies various colorschemes to st.
 * [CSI](https://st.suckless.org/patches/csi_22_23/) - csi patch for restoring st window title.
 * [Dynamic Cursor Color](https://st.suckless.org/patches/dynamic-cursor-color/) - dynamic cursor color patch.

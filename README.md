@@ -33,7 +33,9 @@ Following is a list of patches that I have applied to my custom build of st.
 
 * [Alpha Focus Highlight](https://st.suckless.org/patches/alpha_focus_highlight/)
 * [Anysize](https://st.suckless.org/patches/anysize/)
+* [Blinking Cursor](https://st.suckless.org/patches/blinking_cursor/)
 * [CSI](https://st.suckless.org/patches/csi_22_23/)
+* [Ligatures](https://st.suckless.org/patches/ligatures/)
 * [Scrollback](https://st.suckless.org/patches/scrollback/)
 
 # Keybindings
@@ -45,9 +47,6 @@ In this section I will present the custom keybindings for `st` terminal.
 | Ctrl + Shift + U		| Open a menu with web links from terminal	|
 | Ctrl + Shift + PgUp	| Increase size of the terminal font		|
 | Ctrl + Shift + PgDown | Decrease size of the terminal font		|
-| Alt + 1..8			| Switch between available color schemes	|
-| Alt + 0				| Switch to next color scheme				|
-| Ctrl + Alt + 0		| Switch to previous color scheme			|
 
 # Notes
 
